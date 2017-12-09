@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
  </head>
  <body>
-   <h1>Trips:</h1>
+   <h1><%= @user.username %>'s List of Camping Trips:</h1>
    <ul>
      <ul>
        <% @user.trips.each do |trip|%>
@@ -13,7 +13,7 @@
        <%= trip.date %> <%= trip.name %> </a><br>
        <% end %>
      </ul>
-     
+
    <p><a href="/trips/new"> <button>Add New Trip</button></a></p>
    <p><a href="/users/<%= @user.id %>"><button>Your Profile</button></a></p>
    <p><a href="/logout"><button>Log Out</button></a></p>
