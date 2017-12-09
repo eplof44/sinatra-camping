@@ -21,5 +21,44 @@ class TripsController < ApplicationController
   end
  end
 
- 
+ get '/trips' do
+   if logged_in?
+    @user = current_user
+    @trips = Trip.all
+    erb :'/trips/trips'
+   else
+    redirect "/login"
+   end
+  end
+
+  get '/trips/:id' do
+   if logged_in?
+    @trip = Trip.find(params[:id])
+    @camper = User.find(@trip.user_id)
+    erb :'trips/show'
+   else
+    redirect "/login"
+   end
+  end
+
+  post '/trips/:id/edit' do
+   @trip = Trip.find(params[:id])
+   if logged_in? && @trip.user_id == current_user.id
+    erb :'trips/edit'
+   else
+    redirect "/login"
+   end
+  end
+
+  patch '/trips/:id' do
+   @trip = Trip.find(params[:id])
+   if params[:summary] == ""
+    redirect "/trips/#{params[:id]}/edit"
+   else
+    @trip.update(name: params[:name], location: params[:location], site: params[:site], date: params[:date], summary: params[:summary])
+    redirect "/trips/#{params[:id]}"
+   end
+  end
+  
+
 end
