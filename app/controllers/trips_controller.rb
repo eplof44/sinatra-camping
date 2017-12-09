@@ -50,7 +50,7 @@ class TripsController < ApplicationController
    end
   end
 
-  patch '/trips/:id' do
+  post '/trips/:id' do
    @trip = Trip.find(params[:id])
    if params[:summary] == ""
     redirect "/trips/#{params[:id]}/edit"
@@ -59,6 +59,16 @@ class TripsController < ApplicationController
     redirect "/trips/#{params[:id]}"
    end
   end
-  
+
+  post '/trips/:id/delete' do
+   @trip = Trip.find(params[:id])
+   @user = current_user
+   if logged_in? && @trip.user_id == @user.id
+    @trip.delete
+    erb :'/trips/delete'
+   else
+    redirect "/login"
+   end
+  end
 
 end
