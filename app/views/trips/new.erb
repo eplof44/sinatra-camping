@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Add a New Trip</title>
+ </head>
+ <body>
+   <h1>Add a new Trip</h1>
+
+   <form method="POST" action="/trips">
+   Park Name: <input type="string" name="name"><br><br>
+   Park Location: <input type="string" name="location"><br><br>
+   Date of Trip: <input type="date" name="date"><br><br>
+   Site Number: <input type="integer" name="site"><br><br>
+   Trip Details: <input type="textarea" name="summary"><br><br>
+   <input type="submit" value="Submit">
+   </form>
+
+   <p><a href="/users/<%= @user.id %>"><button>Your Profile</button></a></p>
+
+   <p><a href="/logout"><button>Log Out</button></a></p>
+
+
+
+ </body>
+</html>
