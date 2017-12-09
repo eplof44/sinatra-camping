@@ -1,2 +1,4 @@
 class User < ActiveRecord::Base
-end 
+  has_secure_password
+  has_many :trips
+end
