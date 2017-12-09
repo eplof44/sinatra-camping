@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+ </head>
+ <body>
+   <h2> Camping Trip: <%= @trip[:name] %> </h2>
+   <h1> User: <%= @camper.username %> </h1>
+   <h1> Location: <%= @trip.location %> </h1>
+   <h1> Date: <%= @dream[:date] %> </h1>
+   <h1> Site Number: <%= @dream[:sire] %> </h1>
+   <h1> Trip Details: </h2>
+   <p><%= @trip[:summary] %> </p>
+   <br>
+   <form method="post" action="/trips/<%= @trip.id %>/edit">
+   <input id="hidden" type="hidden" name="_method" value="edit">
+   <input type="submit" value="Edit This Trip">
+   </form><br>
+
+
+   <form method="post" action="/trips/<%= @trip.id %>/delete">
+   <input id="hidden" type="hidden" name="_method" value="delete">
+   <input type="submit" value="Delete This Trip">
+   </form>
+
+   <p><a href="/users/<%= @trip.user_id %>"><button>Your Profile</button></a></p>
+
+
+   <p><a href="/logout"><button>Log Out</button></a></p>
+
+ </body>
+</html>
