@@ -29,7 +29,7 @@ class UsersController < ApplicationController
       if !User.exists?(session[:user_id])
         erb :'/users/login'
       else
-        redirect "/dreams"
+        redirect "/trips"
       end
     end
 
