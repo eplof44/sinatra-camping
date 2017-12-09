@@ -7,12 +7,13 @@
  <body>
    <h1>Trips:</h1>
    <ul>
-     <% @trips.each do |trip|%>
-     <a href="/trips/<%= trip.id %>">
-     <%= trip.date %> <%= trip.name %></a><br>
-     <% end %>
-   </ul>
-
+     <ul>
+       <% @user.trips.each do |trip|%>
+       <a href="/trips/<%= trip.id %>">
+       <%= trip.date %> <%= trip.name %> </a><br>
+       <% end %>
+     </ul>
+     
    <p><a href="/trips/new"> <button>Add New Trip</button></a></p>
    <p><a href="/users/<%= @user.id %>"><button>Your Profile</button></a></p>
    <p><a href="/logout"><button>Log Out</button></a></p>

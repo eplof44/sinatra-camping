@@ -40,7 +40,7 @@ class UsersController < ApplicationController
         session[:user_id] = @user.id
         redirect "/users/#{@user.id}"
      else
-        erb :'/users/invalid'
+        erb :'/users/error'
      end
     end
 
