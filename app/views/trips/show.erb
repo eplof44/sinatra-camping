@@ -9,14 +9,12 @@
    <h1> Location: <%= @trip.location %> </h1>
    <h1> Date: <%= @trip[:date] %> </h1>
    <h1> Site Number: <%= @trip[:site] %> </h1>
-   <h1> Trip Details: </h2>
-   <p><%= @trip[:summary] %> </p>
+   <h1> Trip Details: <%= @trip[:summary] %> </h2>
    <br>
    <form method="post" action="/trips/<%= @trip.id %>/edit">
    <input id="hidden" type="hidden" name="_method" value="edit">
    <input type="submit" value="Edit This Trip">
-   </form><br>
-
+   </form>
 
    <form method="post" action="/trips/<%= @trip.id %>/delete">
    <input id="hidden" type="hidden" name="_method" value="delete">
