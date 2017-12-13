@@ -4,8 +4,10 @@
  <head>
   <meta charset="UTF-8">
  </head>
+
  <body>
    <h1><%= @user.username %>'s List of Camping Trips:</h1>
+   <div class ="main tab_box">
    <ul>
      <ul>
        <% @user.trips.each do |trip|%>
@@ -19,4 +21,5 @@
    <p><a href="/logout"><button>Log Out</button></a></p>
 
  </body>
+ </div>
 </html>
