@@ -3,23 +3,24 @@
  <head>
   <meta charset="UTF-8">
  </head>
- <body>
+ <div class ="main login-top">
+
+  <body>
    <h1>Add a New Trip</h1>
 
    <form method="POST" action="/trips">
-   Park Name: <input type="string" name="name"><br><br>
-   Park Location: <input type="string" name="location"><br><br>
-   Date of Trip: <input type="date" name="date"><br><br>
-   Site Number: <input type="integer" name="site"><br><br>
-   Trip Details: <input type="textarea" name="summary"><br><br>
+   <h3> Park Name:</h3> <input type="string" name="name"><br><br>
+    <h3>Park Location: </h3> <input type="string" name="location"><br><br>
+    <h3>Date of Trip: </h3> <input type="date" name="date"><br><br>
+    <h3>Site Number:</h3> <input type="integer" name="site"><br><br>
+    <h3>Trip Details: </h3> <input type="textarea" name="summary"><br><br>
    <input type="submit" value="Submit">
    </form>
 
-   <p><a href="/users/<%= @user.id %>"><button>Your Profile</button></a></p>
+<a href="/users/<%= @user.id %>"><button>Your Profile</button></a></p>
 
    <p><a href="/logout"><button>Log Out</button></a></p>
 
-
-
  </body>
+ </div>
 </html>

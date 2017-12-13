@@ -1,12 +1,16 @@
+<div class ="main login-top">
+
 <h1>Edit Your Trip</h1>
 
 <form method="post" action="/trips/<%= @trip.id %>">
 
 <input id="hidden" type="hidden" name="_method" value="patch">
-Park Name: <input type="string" value="<%=@trip.name%>" name="name"><br><br>
-Park Location: <input type="string" value="<%=@trip.location%>" name="location"><br><br>
-Date of Trip: <input type="date" value="<%=@trip.date%>" name="date"><br><br>
-Site Number: <input type="integer" value="<%=@trip.site%>"name="site"><br><br>
-Trip Details: <input type="textarea" value="<%=@trip.summary%>"name="summary"><br><br>
-<input type="submit" value="submit">
+<h3> Park Name: </h3> <input type="string" value="<%=@trip.name%>" name="name"><br><br>
+<h3> Park Location: </h3> <input type="string" value="<%=@trip.location%>" name="location"><br><br>
+<h3> Date of Trip:</h3>  <input type="date" value="<%=@trip.date%>" name="date"><br><br>
+<h3> Site Number:</h3>  <input type="integer" value="<%=@trip.site%>"name="site"><br><br>
+<h3> Trip Details: </h3> <input type="textarea" value="<%=@trip.summary%>"name="summary"><br><br>
+<input type="submit" value="Update">
 </form>
+
+</div>

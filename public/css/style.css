@@ -76,6 +76,16 @@ h1 {
     margin: .3em 0 .5em;
     letter-spacing: 3px;
 }
+
+
+h3 {
+    font-size: 1em;
+    font-weight: 500;
+    color: #FFF;
+    margin: .3em 0 .5em;
+    letter-spacing: 3px;
+}
+
 /*-- main --*/
 .main {
     margin: 0 auto;
@@ -116,7 +126,7 @@ h1 {
 	-ms-transition:0.5s all;
 }
 .login-top input[type="submit"]:hover {
-    background-color: #ffb900;
+    background-color: #FFA500	;
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
 	-moz-transition:0.5s all;
