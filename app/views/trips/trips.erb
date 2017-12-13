@@ -12,7 +12,7 @@
      <ul>
        <% @user.trips.each do |trip|%>
        <a href="/trips/<%= trip.id %>">
-       <%= trip.date %> <%= trip.name %> </a><br>
+       <%= trip.name %> - <%= trip.date %> </a><br>
        <% end %>
      </ul>
    </ul>
